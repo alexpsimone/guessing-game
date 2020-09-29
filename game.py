@@ -5,9 +5,6 @@ from random import randint
 print("Welcome to the Guessing Game!")
 name = input("What is your name? ")
 randnum = randint(1, 100)
-#DELETE THIS LATER - DIAGNOSTIC
-print(randnum)
-
 game_active = True
 num_guesses = 0
 
