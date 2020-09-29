@@ -5,6 +5,9 @@ from random import randint
 print("Welcome to the Guessing Game!")
 name = input("What is your name? ")
 randnum = randint(1, 100)
+#DELETE THIS LATER - DIAGNOSTIC
+print(randnum)
+
 game_active = True
 num_guesses = 0
 
@@ -24,5 +27,7 @@ while game_active == True:
         #give hint and increment number of guesses
     #if guess is correct
     else:
+        num_guesses += 1
         game_active = False
+        print(f"Well done, {name}! You've found my number in {num_guesses} amount of tries!")
         #congratulate player
