@@ -12,19 +12,28 @@ num_guesses = 0
 #create while loop
 while game_active == True:
     #ask for guess
-    playernum = int(input("Guess a number: "))
-    #check if guess is correct
-    if playernum != randnum:
-        num_guesses += 1
-        if playernum > randnum:
-            print("Your guess is too high.")
+    try:
+        playernum = int(input("Guess a number: "))
+        if playernum < 1 or playernum > 100:
+            print("How dare you select a num out of range! Try again!")
         else:
-            print("Your guess is too low.")
-    #if guess is incorrect:
-        #give hint and increment number of guesses
-    #if guess is correct
-    else:
+            #check if guess is correct
+            if playernum != randnum:
+                num_guesses += 1
+                if playernum > randnum:
+                    print("Your guess is too high.")
+                else:
+                    print("Your guess is too low.")
+            #if guess is incorrect:
+                #give hint and increment number of guesses
+            #if guess is correct
+            else:
+                num_guesses += 1
+                game_active = False
+                print(f"Well done, {name}! You've found my number in {num_guesses} amount of valid and invalid tries!")
+                #congratulate player
+    except ValueError:
         num_guesses += 1
-        game_active = False
-        print(f"Well done, {name}! You've found my number in {num_guesses} amount of tries!")
-        #congratulate player
+        print("That's not a valid number. Please put an integer.")
+    
+        
