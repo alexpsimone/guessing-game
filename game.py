@@ -7,10 +7,12 @@ name = input("What is your name? ")
 randnum = randint(1, 100)
 game_active = True
 num_guesses = 0
+roundNum = 0
 
 #repeat forever:
 #create while loop
 while game_active == True:
+    print(randnum)
     #ask for guess
     try:
         playernum = int(input("Guess a number: "))
@@ -29,6 +31,7 @@ while game_active == True:
             #if guess is correct
             else:
                 num_guesses += 1
+                roundNum += 1
                  #congratulate player
                 print(f"Well done, {name}! You've found my number in {num_guesses} amount of valid and invalid tries!")
                 askloop = True
