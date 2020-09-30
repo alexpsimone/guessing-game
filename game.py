@@ -29,11 +29,21 @@ while game_active == True:
             #if guess is correct
             else:
                 num_guesses += 1
-                game_active = False
+                 #congratulate player
                 print(f"Well done, {name}! You've found my number in {num_guesses} amount of valid and invalid tries!")
-                #congratulate player
+                 #after a round, ask player if they want to play again
+                 #if player wants to play again:
+                    #reset random number
+                    #reset number of tries/num_guesses
+                #if player doesn't want to play again:
+                    #turn off game
+                    #game_active = False
+                    #Tell user how many times they played and what their best score is.
     except ValueError:
         num_guesses += 1
         print("That's not a valid number. Please put an integer.")
     
+    #while game is running
+        #keep track of scores
+        #keep track of round number
         
