@@ -13,7 +13,6 @@ bestscore = 101
 #repeat forever:
 #create while loop
 while game_active == True:
-    print(randnum)
     #ask for guess
     try:
         playernum = int(input("Guess a number: "))
@@ -56,7 +55,7 @@ while game_active == True:
                     elif play_again == "n":
                         game_active = False
                         askloop = False
-                        print(f"You've made it to play_again = n")
+                        print(f"Your best score is {bestscore} and you played {roundNum} time(s).")
                     else:
                         print("That's not a valid response! Please enter y or n.")
 
